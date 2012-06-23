@@ -1,0 +1,73 @@
+﻿@{
+    Layout = null;
+}
+@model AdminConsole.Models.TargetContainer
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Details</h2>
+
+    @if (Model != null)
+    {
+        <table>
+            <tr>                              
+                <th>
+                    Description</th>
+                <th>
+                    Sequence</th>
+                <th>
+                    InheritsParent</th>
+                <th>
+                    ExtendedProperty</th>
+                <th>
+                    TargetContainer1</th>
+                <th>
+                    DesktopType</th>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Sequence)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.InheritsParent)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ExtendedProperty)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ParentTargetContainer.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Desktop.Description)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+                </td>
+                <td>
+                    @Html.ActionLink("Add Target", "Create", "Target", new { targetContainerId = Model.Id }, null)
+                </td>
+            </tr>
+        </table>
+        
+        
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Address</th>
+                <th>TargetType</th>
+            </tr>
+            @foreach (var target in Model.Targets)
+            {
+                <tr>
+                    <td> @(target.Id) </td>
+                    <td> @(target.Address) </td>
+                    <td> @(target.TargetType.TargetTypeCode) </td>
+                </tr>
+            }
+        </table>
+    }
+</body>
+</html>

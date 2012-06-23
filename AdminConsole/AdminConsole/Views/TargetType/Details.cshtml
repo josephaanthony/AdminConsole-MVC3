@@ -1,0 +1,20 @@
+﻿@model AdminConsole.Models.TargetType
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>TargetType</legend>
+
+    <div class="display-label">Description</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.TargetTypeCode }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

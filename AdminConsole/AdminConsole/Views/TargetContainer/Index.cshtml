@@ -1,0 +1,63 @@
+﻿@model IEnumerable<AdminConsole.Models.TargetContainer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Description
+        </th>
+        <th>
+            Sequence
+        </th>
+        <th>
+            InheritsParent
+        </th>
+        <th>
+            ExtendedProperty
+        </th>
+        <th>
+            TargetContainer1
+        </th>
+        <th>
+            DesktopType
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sequence)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InheritsParent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExtendedProperty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParentTargetContainer.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Desktop.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

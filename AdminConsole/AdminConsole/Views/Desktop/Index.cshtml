@@ -1,0 +1,46 @@
+﻿@model IEnumerable<AdminConsole.Models.Desktop>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            DesktopCode
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            ExtendedProperty
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DesktopCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExtendedProperty)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Show", "Index", "SiteMap", new { desktopType=item.DesktopCode }, null)
+        </td>
+    </tr>
+}
+
+</table>

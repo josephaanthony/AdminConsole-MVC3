@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminConsole", "AdminConsole\AdminConsole.csproj", "{15FC1230-863D-4B55-8D1D-52881B621A0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminConsole.Tests", "AdminConsole.Tests\AdminConsole.Tests.csproj", "{73D66EC8-354A-4764-8EF4-9C0FA2B9B655}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15FC1230-863D-4B55-8D1D-52881B621A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15FC1230-863D-4B55-8D1D-52881B621A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15FC1230-863D-4B55-8D1D-52881B621A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15FC1230-863D-4B55-8D1D-52881B621A0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73D66EC8-354A-4764-8EF4-9C0FA2B9B655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73D66EC8-354A-4764-8EF4-9C0FA2B9B655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73D66EC8-354A-4764-8EF4-9C0FA2B9B655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73D66EC8-354A-4764-8EF4-9C0FA2B9B655}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
